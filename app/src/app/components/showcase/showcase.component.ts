@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http.service';
 import { IProduct } from 'src/app/interfaces/product.interface';
-
+import list from 'src/app/endpoint/products.json';
 
 @Component({
   selector: 'app-showcase',
@@ -11,19 +11,14 @@ import { IProduct } from 'src/app/interfaces/product.interface';
 export class ShowcaseComponent implements OnInit {
 
   urlProducts: string;
-  showcase: [IProduct];
+  showcase: any;
 
   constructor(
     private httpService: HttpService
-  ) { 
-    const urlDomain = `${window.location.protocol}//${window.location.hostname}`;
-    this.urlProducts = `${urlDomain}:3000/products`;
-  }
+  ) { }
 
   ngOnInit(): void {
-    this.httpService.getRequest(this.urlProducts).subscribe((responseBody: [IProduct]): void => {
-      this.showcase = responseBody;
-    });
+    this.showcase = list;
   }
 
 }

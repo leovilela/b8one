@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "favorite": false,
+    "image": "/assets/images/image.png",
+    "title": "Produto 1",
+    "oldPrice": 2323.1,
+    "newPrice": 1234.0,
+    "nInstalments": 10,
+    "priceInstalments": 123.4,
+    "added": false
+  },
+
+  {
+    "id": 2,
+    "favorite": false,
+    "image": "/assets/images/image2.png",
+    "title": "Produto 2",
+    "oldPrice": 23.1,
+    "newPrice": 12.0,
+    "nInstalments": 1,
+    "priceInstalments": 12.4,
+    "added": false
+  },
+
+  {
+    "id": 3,
+    "favorite": false,
+    "image": "/assets/images/image3.png",
+    "title": "Produto 2",
+    "oldPrice": 23.1,
+    "newPrice": 12.0,
+    "nInstalments": 1,
+    "priceInstalments": 12.4,
+    "added": false
+  },
+
+  {
+    "id": 4,
+    "favorite": false,
+    "image": "/assets/images/image4.png",
+    "title": "Produto 2",
+    "oldPrice": 23.1,
+    "newPrice": 12.0,
+    "nInstalments": 1,
+    "priceInstalments": 12.4,
+    "added": false
+  }
+]
