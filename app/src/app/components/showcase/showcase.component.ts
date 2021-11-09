@@ -16,7 +16,8 @@ export class ShowcaseComponent implements OnInit {
   constructor(
     private httpService: HttpService
   ) { 
-    this.urlProducts = "http://localhost:3000/products"
+    const urlDomain = `${window.location.protocol}//${window.location.hostname}`;
+    this.urlProducts = `${urlDomain}:3000/products`;
   }
 
   ngOnInit(): void {
