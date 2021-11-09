@@ -12,7 +12,5 @@ Versões dos softwares usados
 Instalação
 - Baixar o repositório
 - Com os softwares acima descritos rodar o comando `npm install`
-- Dentro do diretório `app`, rodar o comando `json-server --watch endpoint/products.json`
 - Ainda no mesmo diretório, rodar o comando `npm run start`
 - A página irá rodar localmente no endereço `http://localhost:4200`
-- O servidor Json irá rodar no endereço `http://localhost:3000/products`
