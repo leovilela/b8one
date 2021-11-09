@@ -1,13 +1,37 @@
 <div class="product">
-    <button (click)="callFavorite(product.id)" class="buttonFavorite" [class] = "product.favorite ? 'buttonFavoriteActive' : ''">
-        <div class="iconFavorite"></div>                
-    </button>
-    <img [src]="product.image" width="240" height="240">
-    <div class="title">
-        {{product.title}}
+  <button
+    (click)="callFavorite(product.id)"
+    class="buttonFavorite"
+    [class]="product.favorite ? 'buttonFavoriteActive' : ''"
+  >
+    <div class="iconFavorite"></div>
+  </button>
+  <img [src]="product.image" width="240" height="240" />
+  <div class="title">
+    {{ product.title }}
+  </div>
+  <div class="description oldPrice">
+    {{ product.oldPrice | currency: "BRL":"symbol" }}
+  </div>
+  <div class="description newPrice">
+    {{ product.newPrice | currency: "BRL":"symbol" }}
+  </div>
+  <div class="description installment">
+    <div *ngIf="product.nInstalments > 1">
+      em até
+      <strong
+        >{{ product.nInstalments }}x de
+        {{ product.priceInstalments | currency: "BRL":"symbol" }}</strong
+      >
+      sem juros
     </div>
-    <div class="description oldPrice">{{product.oldPrice | currency:"BRL":"symbol"}}</div>
-    <div class="description newPrice">{{product.newPrice |currency:"BRL":"symbol"}}</div>
-    <div class="description installment" *ngIf='product.nInstalments > 1'>em até <strong>{{product.nInstalments}}x de {{product.priceInstalments |currency:"BRL":"symbol"}}</strong> sem juros</div>
-    <button (click)="callAdd(product.id)" class="add" [class] = "product.added ? 'added' : ''"><div class="checked"></div>{{product.added ? 'ADICIONADO' : 'ADICIONAR'}}</button>
+  </div>
+  <button
+    (click)="callAdd(product.id)"
+    class="add"
+    [class]="product.added ? 'added' : ''"
+  >
+    <div class="checked"></div>
+    {{ product.added ? "ADICIONADO" : "ADICIONAR" }}
+  </button>
 </div>
